@@ -1,0 +1,68 @@
+{
+  "name": "backoffice",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ./src/deploy/server.js",
+    "dev-2": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "analyze": "ANALYZE=true yarn build",
+    "format-code": "prettier \"pages/**/*.*\" \"components/**/*.*\" \"layouts/**/*.*\" \"config/**/*.*\" --write",
+    "lint": "eslint --ext .ts,.tsx ."
+  },
+  "dependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/is-prop-valid": "^1.1.0",
+    "@emotion/styled": "^11.1.5",
+    "@emotion/styled-base": "^11.0.0",
+    "applicationinsights": "^1.8.10",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "emotion-theming": "^11.0.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "formik": "^2.2.6",
+    "helmet": "^4.4.1",
+    "morgan": "^1.10.0",
+    "next": "^10.0.0",
+    "next-csrf": "^0.1.1",
+    "prop-types": "^15.7.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.2.3",
+    "use-script": "^3.0.0",
+    "uuid": "^8.3.2",
+    "web-vitals": "^1.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.1",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.31",
+    "@types/prop-types": "^15.7.3",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@types/styled-jsx": "^2.2.8",
+    "@types/uuid": "^8.3.0",
+    "@types/validator": "^13.1.3",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "typescript": "^4.2.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }
+}

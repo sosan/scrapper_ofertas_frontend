@@ -22,6 +22,7 @@ export default function Login()
   const sendForm = async(values: unknown) =>
   {
 
+    values = true;
     //en caso de estar logueado que no pulse
     if (isLogged === true)
     {

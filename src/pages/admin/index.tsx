@@ -30,7 +30,6 @@ export default function Login()
     }
 
 
-
     setLogged(true);
 
     console.log("clickeado")

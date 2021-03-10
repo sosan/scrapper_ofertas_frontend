@@ -4,9 +4,9 @@ const express = require('express');
 const next = require('next');
 const cors = require("cors");
 
+//TOOD CSRF
 // const csrf = require('csurf');
 // const cookieParser = require('cookie-parser');
-
 // const csrfProtection = csrf({ cookie: true });
 
 const dev = process.env.NODE_ENV !== 'production';
@@ -23,7 +23,6 @@ app.prepare()
 
     server.disable('x-powered-by');
     server.disable('server');
-    // server.use(cookieParser());
 
     server.get('*', (req, res) =>
     {

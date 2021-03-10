@@ -27,19 +27,8 @@ app.prepare()
 
     server.get('*', (req, res) =>
     {
-      // const parsedUrl = new URL(req.url, 'http://w.w');
-      // const { pathname, query } = parsedUrl;
 
-      // if (pathname === '/admin')
-      // {
-      //   app.render(req, res, '/admin', query)
-      // } else if (pathname === '/') {
-      //   app.render(req, res, '/', query)
-      // } else {
-      //   handle(req, res, parsedUrl)
-      // }
-
-      //TODO: corregir w.w
+      //TODO: process.env.baseurl
       const parsedUri = new URL(req.url, process.env.BASE_URL);
       if (parsedUri)
       {

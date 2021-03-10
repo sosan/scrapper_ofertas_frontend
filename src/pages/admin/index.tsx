@@ -3,7 +3,7 @@
 // https://react-svgr.com/playground/?typescript=true
 // https://formik.org/docs/overview
 
-import React, { useState } from 'react';
+import React, { BaseSyntheticEvent, useState } from 'react';
 import Head from 'next/head';
 import EmailSvgComponent from "./components/EmailSvgComponent";
 import PasswordSvgComponent from "./components/PasswordSvgComponent";
@@ -11,18 +11,36 @@ import PasswordSvgComponent from "./components/PasswordSvgComponent";
 
 import { Formik, Field, Form } from "formik";
 
+interface Values
+{
+  email: String,
+  password: String,
+  username: String
+};
+
 
 export default function Login()
 {
 
-
   let [ isLogged, setLogged ]  = useState(false);
 
 
-  const sendForm = async(values: unknown) =>
+  function sendForm(values: Values)
   {
 
-    values = true;
+// let s: object = {
+// "email": "asdfsdf@s.fsd.com",
+// "password": "skdjflsdf",
+// "username": ""
+// };
+
+    if (values["username"] !== "" && values["password"] === "" && values["password"] === "")
+      return;
+
+
+
+    console.log("ssdfsdfsdf")
+
     //en caso de estar logueado que no pulse
     if (isLogged === true)
     {
@@ -30,10 +48,18 @@ export default function Login()
     }
 
 
-    setLogged(true);
+    setLogged(false);
 
     console.log("clickeado")
+
   }
+
+  const test = (values: any) =>
+  {
+
+  }
+
+
 
 
 
@@ -79,7 +105,7 @@ export default function Login()
                       <PasswordSvgComponent />
                     </div>
                   </div>
-                  <button type="submit" >Entrar</button>
+                  <button type="submit" onClick={ test  }  >Entrar</button>
 
                 </Form>
               </Formik>

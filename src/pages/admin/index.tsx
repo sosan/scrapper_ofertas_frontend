@@ -73,6 +73,8 @@ export default function Login()
 
       await fetch(host);
 
+
+      
       setCountClicked(0);
 
 

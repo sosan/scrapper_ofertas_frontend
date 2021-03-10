@@ -10,7 +10,8 @@ const cors = require("cors");
 // const csrfProtection = csrf({ cookie: true });
 
 const dev = process.env.NODE_ENV !== 'production';
-const port = process.env.PORT || 3000;
+const port = process.env.NODE_FRONT_PORT || 3000;
+
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
@@ -38,10 +39,15 @@ app.prepare()
       //   handle(req, res, parsedUrl)
       // }
 
+      //TODO: corregir w.w
+      const parsedUri = new URL(req.url, process.env.BASE_URL);
+      if (parsedUri)
+      {
+        const pathName = parsedUri["pathname"];
+        const _query = parsedUri["query"] || undefined;
+        app.render(req, res, pathName, _query);
 
-      const pathName = req._parsedUrl["pathname"];
-      const _query = req._parsedUrl["query"] || undefined;
-      app.render(req, res, pathName, _query);
+      }
 
 
     });

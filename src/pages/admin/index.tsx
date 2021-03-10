@@ -3,7 +3,7 @@
 // https://react-svgr.com/playground/?typescript=true
 // https://formik.org/docs/overview
 
-import React, { BaseSyntheticEvent, useState } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import EmailSvgComponent from "./components/EmailSvgComponent";
 import PasswordSvgComponent from "./components/PasswordSvgComponent";
@@ -54,15 +54,6 @@ export default function Login()
 
   }
 
-  const test = (values: any) =>
-  {
-
-  }
-
-
-
-
-
 
   if (isLogged === false)
   {
@@ -105,7 +96,7 @@ export default function Login()
                       <PasswordSvgComponent />
                     </div>
                   </div>
-                  <button type="submit" onClick={ test  }  >Entrar</button>
+                  <button type="submit">Entrar</button>
 
                 </Form>
               </Formik>

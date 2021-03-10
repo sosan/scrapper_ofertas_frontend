@@ -3,14 +3,13 @@
 // https://react-svgr.com/playground/?typescript=true
 // https://formik.org/docs/overview
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import EmailSvgComponent from "./components/EmailSvgComponent";
 import PasswordSvgComponent from "./components/PasswordSvgComponent";
 
 
 import { Formik, Field, Form } from "formik";
-import { number } from 'prop-types';
 
 interface Values
 {
@@ -74,7 +73,7 @@ export default function Login()
       await fetch(host);
 
 
-      
+
       setCountClicked(0);
 
 

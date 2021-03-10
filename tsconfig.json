@@ -23,9 +23,14 @@
     "noUnusedLocals": true, // Report errors on unused locals
     "noUnusedParameters": true, // Report errors on unused parameters
     "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
-    "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
-    // "baseUrl": "."
+    // "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
+    // "outDir": "build",
+    // "emitDecoratorMetadata": true,
+    // "experimentalDecorators": true,
+    // "noImplicitAny": true,
+    "tsBuildInfoFile": ".tsbuildinfo"
   },
+
   "include": [
     "src/**/*" // *** The files TypeScript should type check ***
   ],
